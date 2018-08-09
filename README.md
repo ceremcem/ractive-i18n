@@ -1,5 +1,5 @@
-# ractive-translation
-HOWTO to describe proper translation approach in Ractive 
+# Ractive Translation
+This HOWTO describes the proper translation approach in Ractive.
 
 ## Requirements 
 
@@ -8,6 +8,7 @@ HOWTO to describe proper translation approach in Ractive
 - [ ] Should be available in script side 
 - [ ] Should be lazily loadable/upgradable
 - [ ] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
+- [ ] Should be able to be applied to third party libraries. 
 
 ## Proposals
 
