@@ -6,7 +6,7 @@ HOWTO to describe proper translation approach in Ractive
 - [ ] Shouldn't be verbose
 - [ ] Should be available in template 
 - [ ] Should be available in script side 
-- [ ] Should be lazily loadable 
+- [ ] Should be lazily loadable/upgradable
 - [ ] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
 
 ## Related Conversations 
