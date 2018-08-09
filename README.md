@@ -9,7 +9,8 @@ This HOWTO describes the proper translation approach in Ractive.
 - [ ] Should be lazily loadable/upgradable
 - [ ] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
 - [ ] Should be able to be applied to third party libraries. 
-- [ ] Should be able to let every component define its own translation in the component file. 
+- [ ] Should be able to let every component define its own translation in the component file.
+- [ ] Should let changing sentence structure 
 
 ## Proposals
 
@@ -18,6 +19,32 @@ Use a global function (something like `_t()`) which will look at a dictionary an
 
 **Restrictions**: Can not update its output when language is changed. 
 
+
+## Test Application 
+
+A successfull approach should convert [the following application](https://ractive.js.org/playground/?env=docs#N4IgFiBcoE5SAbAhgFwKYGcUgL4BoQN4AdAO1LQHcACAJSQGMUBLANzQApgzrq0FI1AOQAjAPYATAJ5C8PaugC2AB2TpBAA3m8APGIQA+bb2rBgAYjSMw1AIIwYSKRwDMAShw5jJ6joTMjUh9g3xEAVxQUMSDogFoGfwYAawBeYkInAAl+BDF0gzAcsWpKMRgECR0AenDI6MCQ3Sr-BuCzKqsGME8yYhQ+6v1Avo05IOpowW5x3gwsosEAMzDSJmZojiYADzdpkNYkGGpmahTqbYA6AHM0FA4hAAFmUgk0LaE3agBqagBGAG5eN5qEgEGgYHchAAhCJRIKoY4vN7Cb7HVFCahzKQYaiFBC5D7GLzjYk4NwgAjYSAgHQSNjHCRpEDmJDKZT5ap01gGXBAA) with minimum effort: 
+
+```js
+
+new Ractive({
+  el: 'body',
+  template: `
+    <ol>
+      {{#each Array(3)}}
+        <li>
+          <button on-click="sayHello">hello world</button>
+        </li>
+      {{/each}}
+		</ol>
+	`,
+  on: {
+    sayHello: function(ctx){
+      var i = ctx.get('@index') + 1;  
+      alert('Button at index ' + i + ' says hello')
+    }
+  }
+})
+```
 
 ## Related Conversations 
 
