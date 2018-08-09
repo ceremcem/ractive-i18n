@@ -9,6 +9,7 @@ This HOWTO describes the proper translation approach in Ractive.
 - [ ] Should be lazily loadable/upgradable
 - [ ] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
 - [ ] Should be able to be applied to third party libraries. 
+- [ ] Should be able to let every component define its own translation in the component file. 
 
 ## Proposals
 
