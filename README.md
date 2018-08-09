@@ -35,8 +35,8 @@ new Ractive({
           <button on-click="sayHello">hello world</button>
         </li>
       {{/each}}
-		</ol>
-	`,
+    </ol>
+  `,
   on: {
     sayHello: function(ctx){
       var i = ctx.get('@index') + 1;  
