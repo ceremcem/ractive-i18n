@@ -17,7 +17,7 @@ This HOWTO describes the proper translation approach in Ractive.
 * Global Function 
 Use a global function (something like `_t()`) which will look at a dictionary an get corresponding translation.
 
-**Restrictions**: Can not update its output when language is changed. 
+~~**Restrictions**: Can not update its output when language is changed.~~ [Resolved by @evs-chris](https://gitter.im/ractivejs/ractive?at=5b6c967a179f842c9716dd1d)
 
 
 ## Test Application 
