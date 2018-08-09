@@ -3,19 +3,21 @@ This HOWTO describes the proper translation approach in Ractive.
 
 ## Requirements 
 
-- [ ] Shouldn't be verbose
-- [ ] Should be available in template 
-- [ ] Should be available in script side 
-- [ ] Should be lazily loadable/upgradable
-- [ ] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
+- [x] Shouldn't be verbose
+- [x] Should be available in template 
+- [x] Should be available in script side with the same name 
+- [x] Should be lazily loadable/upgradable
+- [x] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
+    
+    > Just encapsulate the string in `i18n("...")` function
+    
 - [ ] Should be able to be applied to third party libraries. 
 - [ ] Should be able to let every component define its own translation in the component file.
 - [ ] Should let changing sentence structure 
 
-## Proposals
+## Proposed Method
 
-* Global Function 
-Use a global function (something like `_t()`) which will look at a dictionary an get corresponding translation.
+Use a global `i18n()` function: [Playground (WIP)](https://ractive.js.org/playground/?file=index.ractive.html#N4IgLiBcIgNCBnKN4GNlxACyqATlAHYCuANqfEpANogD0dqAJoQHQBWCTApqQJYA3PK0LcwdQgAcAtnTwBDVGEHcAAtyYBzbnMXKB3DggD8ARhABdAL7xpUU-ABmVaqELzp3ZH0I8AHqwKSiqsWGDSpJioAPaEYNxxyAA8CLzcSgAEAvKkxNwAvAA6IMDAqghY8ngarHymABxspPKEmlZWxRmxALSola0FxeWV1Uy1DU3R8kwAFKqE0Tys2bncAJTFAHyFhBkZSdGSyrFZOXlFJcDEvtyOPhrtWzMAIrfyZGBrSXSHx4Tbu32vz4sU2pgAzOCAOzfYGgnZ7A5HEH-ABi0Tw0hysOR8MBSL+mwAavJNHkcYSdt9UqR0mAAVSsKZNgAJXikaKwfYISQtTalOqNGbuTwZAA+YoyAHIAEp6FRStbtam8-4AQm+TIBSQARsQwGATj1UPxUABrC4IeQATzZ5GiWwFExmUqt1oyWHZ0UVyroeoNeKpCFQeD4RwBez40kkGLAGUFhAACrlND4Mo48NFpNLWHQE0YpQBuBEZEsxQgIOMAQUkkgy+QycuCBlY3D88V8M2AJb2xFSkAy1ATyeIqcIMzWFlgPYy8WjzXiA4AJAAVACiAFlEwAZKvr6eAvaoBAIZcAYQAyheD3sjyeAJJMAdS+S1qU32+xAfdw+3nx8MAB0ca5gliGYlD8NYf1vGCMgYWdogyHVuAyeQdVpBCMj7FCKljLJuDwBAUVQuMACkLwyIieFLX8YIAdx8Jhojo8ZGnrWcsD4BBQl4SQCO4hNi1ojIbBnQowFdG07Q5KUgJAv5wLASDoNgvYcgIsAZgTF03Q9L1FQ2QhxL2cSOkBUySysNYhLLWJK1Q2t2IY3xmNYV86wbUQ6IyGtJC7GcwCqbRAOlHVFmtKVLOsqk6GDUNwx2IMwGtWkIw9UwMmADIYg5PABwAYgABkK+oGnkQsRJiysUu4AEQBsNwPC8aB804KJYg7CBoFpOMOWmDR2McHJUhs0Q-BjPA4x4IaPnTeTiMkFMfBmX4EDWTLErAaowGIPBdmAwhQPHLKm30bguR8SsWlQFCrI239LsCw7DE9Ug+MI6gVqOBBxUlYArJEJrfulBMpQsdiZkrPB1vyTZ7tU8t7OaVp2NOkIKiqDQAHExBdfNkc0RUhIRuy4yxDzG3lFsMdGHHNIAA3zcnWCXYACasenouEvhHAyGZyYyAAyQXKK2+NdnJ9btt2iXX2oKGLGJ2DeFSeHVPjXn+dfIWRbRltnjXAAhABVLH1sR6JaVYOiqnHemADlEK2loEAXYj5GyPhmnQlDHAxaVWahqwpXFjJWfZzmldU6W9tFvAo9vMyYLMmceb5tU+p4Jh1pUmDM4GhstryBPxL1wwaY0C9calfGpiYd8MgJ+s4dz2DEbJ7WGzL1gK6YOmZkZiZWGZ8OWjaSOZxgtOZjVSW1fVjW+ab-IV+lCFoUVSnm3LkZK9xwfGmH18WbZseOa5LLJ-V2Uqe4WTpRlAAWVAoVMIk74-Be9kk91Xpk58ECP1-uCcghVIrCWTlzL+GQVYoWnsvVeUp0SYhyJvVIYAVxRm4NEfUMwJzNy3mdHuu8mBVwZkzY+o9Wjn0yjRaB38y73ylBePgeBCEKivpArk4JiqFSgV-WBi8ZgIIbFKEkZI77rXQZgzwODNL4Nhuw6mJCyEDwoZIE+EcL50PoTfbeTCy7dC4lgcB0CrJclMLw-hqkk63lMtYyqgIrBCSsPVKcIBbjeBuAEIIRCwgRHqkAA)
 
 ~~**Restrictions**: Can not update its output when language is changed.~~ [Resolved by @evs-chris](https://gitter.im/ractivejs/ractive?at=5b6c967a179f842c9716dd1d)
 
