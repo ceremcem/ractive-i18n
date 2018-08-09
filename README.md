@@ -46,6 +46,12 @@ new Ractive({
 })
 ```
 
+### Translation Table 
+| en | tr |
+| --- | --- |
+| hello world | merhaba dünya | 
+| Button at index 1 says hello | 1 Numaralı düğme merhaba diyor | 
+
 ## Related Conversations 
 
 * [06.07.2018...](https://gitter.im/ractivejs/ractive?at=5b3f946633b0282df405e475)
