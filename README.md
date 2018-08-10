@@ -1,6 +1,10 @@
 # Ractive Internationalization
 This HOWTO describes the proper multi language approach in Ractive.
 
+# Status 
+
+WIP: Method works OK, data fetching mechanizm needs to be implemented. 
+
 ## Requirements 
 
 - [x] Shouldn't be verbose
@@ -9,7 +13,7 @@ This HOWTO describes the proper multi language approach in Ractive.
 - [x] Should be lazily loadable/upgradable
 - [x] Should let existing strings converted to "multi language strings" with a minimum amount of overhead
     
-    > Just encapsulate the string in `i18n("...")` function
+    > Just encapsulate the string with `t("...")` function
     
 - [ ] Should be able to be applied to third party libraries. 
 - [ ] Should be able to let every component define its own translation in the component file.
