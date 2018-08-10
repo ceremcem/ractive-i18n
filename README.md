@@ -1,5 +1,5 @@
-# Ractive Translation
-This HOWTO describes the proper translation approach in Ractive.
+# Ractive Internationalization
+This HOWTO describes the proper multi language approach in Ractive.
 
 ## Requirements 
 
